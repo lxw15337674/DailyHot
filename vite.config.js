@@ -8,7 +8,7 @@ import Components from "unplugin-vue-components/vite";
 
 export default defineConfig(({ mode }) => {
   return {
-    base: loadEnv(mode, process.cwd())["VITE_DIR"],
+    base: loadEnv(mode, process.cwd())["VITE_DIR"]||'/',
     plugins: [
       vue(),
       AutoImport({
